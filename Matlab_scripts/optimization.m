@@ -4,9 +4,7 @@
 
 %run('initMomentumBasedFlight.m')
 % Load the model
-simOut = sim('C:\Users\pvanteddu\Documents\GitHub\ironcub-mk1-software\flight-controllers-stable\momentum-based-flight-sim-no-gazebo\momentumBasedFlight.mdl');
-
-    
+simOut = sim('C:\Users\pvanteddu\Documents\GitHub\ironcub-mk1-software\flight-controllers-stable\momentum-based-flight-sim-no-gazebo\momentumBasedFlight.mdl');    
 %momentum error
 ang_mom_err = norm([angMom_err_SCOPE.signals(1).values, angMom_err_SCOPE.signals(2).values, angMom_err_SCOPE.signals(3).values])
 lin_mom_err = norm([linMom_err_SCOPE.signals(1).values, linMom_err_SCOPE.signals(2).values, linMom_err_SCOPE.signals(3).values])
@@ -29,6 +27,5 @@ Thrust_obj = T
 disp('Result from optimization:');
 disp(result);
 save('result.mat', 'result');
-% disp(['ang_mom_err = ' num2str(ang_mom_err)]);
 save_system('C:\Users\pvanteddu\Documents\GitHub\ironcub-mk1-software\flight-controllers-stable\momentum-based-flight-sim-no-gazebo\momentumBasedFlight.mdl')
 
