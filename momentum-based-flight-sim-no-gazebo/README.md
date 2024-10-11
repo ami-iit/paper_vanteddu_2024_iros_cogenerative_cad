@@ -1,8 +1,8 @@
 ## Momentum-based flight controller for simulations (no Gazebo)
 
-**This controller is maintained for the robots:**
+**This controller is modified for the robots to perform predefined flight trajectories using autopilot:**
 
-- `iRonCub-Mk1_1`
+- `iRonCub-Mk3`
 
 ### Available simulations:
 
@@ -14,7 +14,7 @@ Jet dynamic model is designed based on experiments with the real turbines. The t
 
 ### Current status:
 
-**Robot:** `iRonCub-Mk1_1`
+**Robot:** `iRonCub-Mk3`
 
 | SIMULATION TYPE | TAKE OFF | HOVERING | SLOW FLIGHT MANEUVERS | FAST FLIGHT MANEUVERS | LANDING |
 |:-------:|:------:|:--------:|:--------:|:--------------------:|:--------------------:|
