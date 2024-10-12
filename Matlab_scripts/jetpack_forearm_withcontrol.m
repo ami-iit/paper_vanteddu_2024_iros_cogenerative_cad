@@ -1,4 +1,5 @@
-urdfFile = 'C:\Users\pvanteddu\Documents\GitHub\element_co-generative-cad\Geometries/CAD/simulation_model/URDFS/jetpack_forearms_control/model_stl.urdf'
+urdfFile = './momentum-based-flight-sim-no-gazebo/robots/model_stl.urdf';
+
 robot = importrobot(urdfFile);
 link_name_1 = 'chest_l_bracket'
 link_name_2 = 'chest_r_bracket'
