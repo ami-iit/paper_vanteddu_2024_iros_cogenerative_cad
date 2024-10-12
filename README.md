@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/744b3896-48fa-4a81-b9fb-ecb3180dbe6f
 
 </p>
 <div align="center">
-  <a href="#installation"><b>Installation</b></a> |
+  <a href="#Installation"><b>Installation</b></a> |
   <a href="https://arxiv.org/abs/2410.07963"><b>arXiv</b></a> |
   <a href="https://www.youtube.com/watch?v=k_rbv8lNKjA&ab_channel=ArtificialandMechanicalIntelligence"><b>Video</b></a>
 </div>
