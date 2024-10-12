@@ -1,7 +1,7 @@
 close all
 %load and Initilalize PDE tool box and the stl file
 model = createpde("structural","static-solid");
-g= importGeometry(model,"cogen_001_p_002.prt_ascii.stl");   
+g= importGeometry(model,"forearm_left.prt_ascii.stl");   
 %evaluate the point of the centre where the force shall be acting upon
 x_n = -(57.9+LENGTH);
 y_n = 20;

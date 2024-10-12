@@ -1,7 +1,7 @@
 close all
 %load and Initilalize PDE tool box and the stl file
 model = createpde("structural","static-solid");
-g= importGeometry(model,"cogen_001_p_001.prt_ascii.stl");   
+g= importGeometry(model,"ft_bracket.prt_ascii.stl");   
 %generate mesh fo the model
 generateMesh(model);
 %evaluate the point of the centre where the force shall be acting upon
