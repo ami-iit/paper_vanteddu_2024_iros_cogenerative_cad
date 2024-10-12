@@ -38,3 +38,8 @@ This repository is maintained by:
 | | |
 |:---:|:---:|
 | [<img src="https://github.com/vpunithreddy.png" width="40">](https://github.com/vpunithreddy) | [@vpunithreddy](https://github.com/vpunithreddy) |
+
+<p align="left">
+   <a href="https://github.com/ami-iit/paper_vanteddu_2024_iros_cogenerative_cad/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ami-iit/paper_vanteddu_2024_iros_cogenerative_cad" alt="Size" class="center"/></a>
+</p>
+

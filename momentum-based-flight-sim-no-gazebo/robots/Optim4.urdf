@@ -1,0 +1,1923 @@
+<robot name="iCub">
+  <link name="root_link">
+    <inertial>
+      <origin xyz="0.0035506 -0.00014959200000000001 0.024519000000000013" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.5751"/>
+      <inertia ixx="0.004051489764137304" ixy="-2.0525354991945143e-06" ixz="-1.200186769383287e-05" iyy="0.004466379288694287" iyz="0.00011702292411912923" izz="0.002537512875376926"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_root_link_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_root_link_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="l_hip_1">
+    <inertial>
+      <origin xyz="-0.004074100000000001 0.028123299999999997 -0.0007250000000000312" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.1611"/>
+      <inertia ixx="0.002595352643142238" ixy="-6.263538591577025e-05" ixz="2.7731363927618977e-06" iyy="0.0021193350821535318" iyz="-1.2725390435109447e-05" izz="0.0023619854835245473"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.021600000000000064 -0.04044999999999981 0.31385800000000025" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.021600000000000064 -0.04044999999999981 0.31385800000000025" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_hip_pitch" type="revolute">
+    <origin xyz="0.0216 0.04045000000000001 0" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="root_link"/>
+    <child link="l_hip_1"/>
+    <limit effort="50000" lower="-0.7853981633974483" upper="2.007128639793479" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_hip_2">
+    <inertial>
+      <origin xyz="-0.003963800000000003 5.489999999999662e-05 -0.037538000000000016" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.7731"/>
+      <inertia ixx="0.005228411714595798" ixy="-4.083551966339624e-06" ixz="3.1651054869901453e-06" iyy="0.0029657585348029296" iyz="0.0009461829267401466" izz="0.0032766682222500967"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.025649999999999822 -0.07354999999999978 0.3228580000000002" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.025649999999999822 -0.07354999999999978 0.3228580000000002" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_hip_roll" type="revolute">
+    <origin xyz="-0.04725 0.0331 -0.009000000000000008" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="l_hip_1"/>
+    <child link="l_hip_2"/>
+    <limit effort="50000" lower="-0.17453292519943295" upper="1.9547687622336491" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_hip_3">
+    <inertial>
+      <origin xyz="0.0024416999999999998 -0.012306900000000003 -0.03819900000000004" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.43975"/>
+      <inertia ixx="0.0044412883972056874" ixy="3.3190647191151945e-06" ixz="-0.0001500433647365573" iyy="0.004161531735667295" iyz="1.0495343014441162e-05" izz="0.004168493190874654"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.011050000000000178 -0.07354999999999977 0.41255800000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.011050000000000178 -0.07354999999999977 0.41255800000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_leg_ft_sensor" type="fixed">
+    <origin xyz="0.036699999999999997 0 -0.08969999999999995" rpy="0 0 0"/>
+    <parent link="l_hip_2"/>
+    <child link="l_hip_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_upper_leg">
+    <inertial>
+      <origin xyz="0.005238099999999999 0.001499300000000009 -0.0518519999999999" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.90926"/>
+      <inertia ixx="0.0018580448030305287" ixy="2.4769869343548534e-05" ixz="-9.921040799831542e-05" iyy="0.0023253336863419895" iyz="0.00021961146368491691" izz="0.0010116953240355718"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.011050000000000167 -0.05854999999999983 0.48345800000000017" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.011050000000000167 -0.05854999999999983 0.48345800000000017" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_hip_yaw" type="revolute">
+    <origin xyz="0 -0.015000000000000006 -0.07090000000000007" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="l_hip_3"/>
+    <child link="l_upper_leg"/>
+    <limit effort="50000" lower="-1.3962634015954636" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_lower_leg">
+    <inertial>
+      <origin xyz="-0.0132211 -0.022063200000000005 -0.12639599999999995" rpy="0 0 -1.5707963267948966"/>
+      <mass value="5.3241"/>
+      <inertia ixx="0.05824701558729114" ixy="0.00010624602688798144" ixz="0.00032177799357201414" iyy="0.055706072617469723" iyz="-0.00018962183345080946" izz="0.006070627555679843"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026050000000000243 -0.08344999999999969 0.5896580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026050000000000243 -0.08344999999999969 0.5896580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_knee" type="revolute">
+    <origin xyz="0.015 0.024900000000000012 -0.10619999999999996" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="l_upper_leg"/>
+    <child link="l_lower_leg"/>
+    <limit effort="50000" lower="-1.2217304763960306" upper="0.08726646259971647" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_ankle_1">
+    <inertial>
+      <origin xyz="-0.0056708999999999996 -0.0004776000000000086 -0.015197000000000016" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.36569"/>
+      <inertia ixx="0.0006919069701304677" ixy="3.642221266176245e-05" ixz="6.0306968718434186e-05" iyy="0.00029801214087017225" iyz="-2.6804257582408287e-05" izz="0.0005496547611177806"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026050000000000052 -0.08295000000000005 0.8456470000000003" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026050000000000052 -0.08295000000000005 0.8456470000000003" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_ankle_pitch" type="revolute">
+    <origin xyz="0 -0.0005000000000000004 -0.255989" rpy="0 0 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="l_lower_leg"/>
+    <child link="l_ankle_1"/>
+    <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_ankle_2">
+    <inertial>
+      <origin xyz="0.0417048 -5.500000000001337e-05 -0.02565099999999998" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.53465"/>
+      <inertia ixx="0.008276628548706496" ixy="5.786254688421673e-06" ixz="-4.092109028187411e-06" iyy="0.0017004608262408357" iyz="0.0012330199976826493" izz="0.008063087568467178"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026699999999999342 -0.0647500000000001 0.8806470000000008" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.026699999999999342 -0.0647500000000001 0.8806470000000008" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_ankle_roll" type="revolute">
+    <origin xyz="-0.052750000000000005 -0.018200000000000008 -0.03500000000000003" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="l_ankle_1"/>
+    <child link="l_ankle_2"/>
+    <limit effort="50000" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_foot_rear">
+    <inertial>
+      <origin xyz="0.0005056000000000001 3.350000000000575e-05 0.003658999999999968" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.17851"/>
+      <inertia ixx="0.00028386984946481193" ixy="-3.8140209422126887e-07" ixz="3.3779281136245455e-06" iyy="0.00022675202580603227" iyz="8.141588837428499e-06" izz="0.00036516477016163983"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.010699999999999342 -0.06475000000000009 0.9464470000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="l_foot_rear_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.010699999999999342 -0.06475000000000009 0.9464470000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_foot_rear_ft_sensor" type="fixed">
+    <origin xyz="0.016 0 -0.06579999999999997" rpy="0 0 0"/>
+    <parent link="l_ankle_2"/>
+    <child link="l_foot_rear"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole"/>
+  <joint name="l_sole_fixed_joint" type="fixed">
+    <origin xyz="0.05963 0 0" rpy="0 0 0"/>
+    <parent link="l_foot_rear"/>
+    <child link="l_sole"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_3"/>
+  <joint name="l_sole_3_fixed_joint" type="fixed">
+    <origin xyz="-0.035 -0.02475 0" rpy="0 0 0"/>
+    <parent link="l_foot_rear"/>
+    <child link="l_sole_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_4"/>
+  <joint name="l_sole_4_fixed_joint" type="fixed">
+    <origin xyz="-0.035 0.03025 0" rpy="0 0 0"/>
+    <parent link="l_foot_rear"/>
+    <child link="l_sole_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_foot_front">
+    <inertial>
+      <origin xyz="7.700000000000762e-05 -3.990000000000937e-05 0.004256999999999955" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.17896"/>
+      <inertia ixx="0.00032486721722121964" ixy="3.5467003209527003e-07" ixz="2.7144049104682455e-07" iyy="0.00025600096782908466" iyz="3.4960507170104935e-05" izz="0.00037767895393194076"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.10855000000000063 -0.06475000000000009 0.9464470000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="l_foot_front_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.10855000000000063 -0.06475000000000009 0.9464470000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_foot_front_ft_sensor" type="fixed">
+    <origin xyz="0.13524999999999998 0 -0.06579999999999997" rpy="0 0 0"/>
+    <parent link="l_ankle_2"/>
+    <child link="l_foot_front"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_1"/>
+  <joint name="l_sole_1_fixed_joint" type="fixed">
+    <origin xyz="0.02500000000000001 0.025249999999999995 0" rpy="0 0 0"/>
+    <parent link="l_foot_front"/>
+    <child link="l_sole_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_2"/>
+  <joint name="l_sole_2_fixed_joint" type="fixed">
+    <origin xyz="0.02500000000000001 -0.02475 0" rpy="0 0 0"/>
+    <parent link="l_foot_front"/>
+    <child link="l_sole_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_hip_1">
+    <inertial>
+      <origin xyz="-0.004106499999999999 -0.02810980000000001 -0.0008360000000000034" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.1623"/>
+      <inertia ixx="0.002675989970439473" ixy="6.426984653122192e-05" ixz="-6.447456052305588e-06" iyy="0.0021990073364667796" iyz="-1.5695577440979572e-05" izz="0.002366627191660443"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0216 0.04054999999999986 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0216 0.04054999999999986 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_hip_pitch" type="revolute">
+    <origin xyz="0.0216 -0.040549999999999996 0" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="root_link"/>
+    <child link="r_hip_1"/>
+    <limit effort="50000" lower="-0.7853981633974483" upper="2.007128639793479" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_hip_2">
+    <inertial>
+      <origin xyz="-0.003963499999999998 -7.010000000000349e-05 -0.03753499999999993" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.7731"/>
+      <inertia ixx="0.005229204654206729" ixy="4.628243459077994e-06" ixz="-3.2636330686460046e-06" iyy="0.0029659325947175245" iyz="0.0009467254134739666" izz="0.00327641680237346"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.025699999999999973 0.07364999999999984 0.3228580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dblue">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.025699999999999973 0.07364999999999984 0.3228580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_hip_roll" type="revolute">
+    <origin xyz="-0.0473 -0.03310000000000001 -0.009000000000000008" rpy="0 0 0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
+    <parent link="r_hip_1"/>
+    <child link="r_hip_2"/>
+    <limit effort="50000" lower="-0.17453292519943295" upper="1.9547687622336491" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_hip_3">
+    <inertial>
+      <origin xyz="0.0024329000000000017 0.01233370000000001 -0.038242000000000054" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.43975"/>
+      <inertia ixx="0.004485784047483899" ixy="-2.3350782161357655e-06" ixz="0.0001440226606671166" iyy="0.00420681558758196" iyz="1.1762844743205253e-05" izz="0.0041711798557694454"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.011000000000000029 0.07364999999999984 0.41255800000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dgreen">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.011000000000000029 0.07364999999999984 0.41255800000000004" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_leg_ft_sensor" type="fixed">
+    <origin xyz="0.036699999999999997 0 -0.08969999999999995" rpy="0 0 0"/>
+    <parent link="r_hip_2"/>
+    <child link="r_hip_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_upper_leg">
+    <inertial>
+      <origin xyz="0.005240300000000003 -0.0014998000000000025 -0.05185799999999996" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.90926"/>
+      <inertia ixx="0.0018609457769770859" ixy="-2.472258346821965e-05" ixz="9.915722347596187e-05" iyy="0.0023282830098543227" iyz="0.00022002726995059012" izz="0.001011608294817175"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.011000000000000012 0.05864999999999984 0.48345800000000005" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.011000000000000012 0.05864999999999984 0.48345800000000005" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_hip_yaw" type="revolute">
+    <origin xyz="0 0.015000000000000006 -0.07090000000000007" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <parent link="r_hip_3"/>
+    <child link="r_upper_leg"/>
+    <limit effort="50000" lower="-1.3962634015954636" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_lower_leg">
+    <inertial>
+      <origin xyz="-0.013102400000000002 0.021986699999999998 -0.127262" rpy="0 0 -1.5707963267948966"/>
+      <mass value="5.3241"/>
+      <inertia ixx="0.058569724854460666" ixy="-0.00011067195586576853" ixz="-0.0002647293063069585" iyy="0.05601996956627755" iyz="-0.00013332765738821662" izz="0.006068235025831327"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026000000000000037 0.0835499999999998 0.589658" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026000000000000037 0.0835499999999998 0.589658" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_knee" type="revolute">
+    <origin xyz="0.015000000000000003 -0.0249 -0.10619999999999996" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="r_upper_leg"/>
+    <child link="r_lower_leg"/>
+    <limit effort="50000" lower="-1.2217304763960306" upper="0.08726646259971647" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_ankle_1">
+    <inertial>
+      <origin xyz="-0.005665800000000002 0.0004764000000000018 -0.015185999999999922" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.36569"/>
+      <inertia ixx="0.0007008795637504032" ixy="-3.63258049040399e-05" ixz="-6.07134864852001e-05" iyy="0.00030702728154466944" iyz="-2.6127082529919777e-05" izz="0.0005495280869326084"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026000000000000245 0.08304999999999924 0.8456470000000003" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_ankle_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026000000000000245 0.08304999999999924 0.8456470000000003" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_ankle_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_ankle_pitch" type="revolute">
+    <origin xyz="0 0.0005000000000000004 -0.255989" rpy="0 0 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="r_lower_leg"/>
+    <child link="r_ankle_1"/>
+    <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_ankle_2">
+    <inertial>
+      <origin xyz="0.0417371 5.619999999997849e-05 -0.025592999999999977" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.53465"/>
+      <inertia ixx="0.008359137510182012" ixy="-6.658498141958317e-06" ixz="1.6236202151564518e-06" iyy="0.001778865481574069" iyz="0.001241649614839054" izz="0.008067236320993203"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026749999999999875 0.0648499999999391 0.8806470000000108" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.026749999999999875 0.0648499999999391 0.8806470000000108" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_ankle_roll" type="revolute">
+    <origin xyz="-0.052750000000000005 0.018200000000000008 -0.03500000000000003" rpy="0 0 0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
+    <parent link="r_ankle_1"/>
+    <child link="r_ankle_2"/>
+    <limit effort="50000" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_foot_front">
+    <inertial>
+      <origin xyz="-0.0004180000000000017 0.0004849999999999993 0.005581000000000058" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.17964"/>
+      <inertia ixx="0.0004475629748133475" ixy="-1.1622018441861841e-05" ixz="2.9686391650024495e-05" iyy="0.0003761336092973683" iyz="7.056362242091155e-05" izz="0.00040019707061844293"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.10850000000000012 0.0648499999999391 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="r_foot_front_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.10850000000000012 0.0648499999999391 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_foot_front_ft_sensor" type="fixed">
+    <origin xyz="0.13525 0 -0.06579999999999997" rpy="0 0 0"/>
+    <parent link="r_ankle_2"/>
+    <child link="r_foot_front"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_1"/>
+  <joint name="r_sole_1_fixed_joint" type="fixed">
+    <origin xyz="0.02500000000000001 -0.025150000000000006 0" rpy="0 0 0"/>
+    <parent link="r_foot_front"/>
+    <child link="r_sole_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_2"/>
+  <joint name="r_sole_2_fixed_joint" type="fixed">
+    <origin xyz="0.02500000000000001 0.02484999999999999 0" rpy="0 0 0"/>
+    <parent link="r_foot_front"/>
+    <child link="r_sole_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_foot_rear">
+    <inertial>
+      <origin xyz="0.0006180999999999999 7.079999999998199e-05 0.003514000000000017" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.17874"/>
+      <inertia ixx="0.00023837060598027492" ixy="1.5972601165325875e-07" ixz="2.851962872955676e-06" iyy="0.00018229756818021977" iyz="-1.2898142814635283e-06" izz="0.0003645245458529223"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.010749999999999876 0.0648499999999391 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="r_foot_rear_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.010749999999999876 0.0648499999999391 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_foot_rear_ft_sensor" type="fixed">
+    <origin xyz="0.016 0 -0.06579999999999997" rpy="0 0 0"/>
+    <parent link="r_ankle_2"/>
+    <child link="r_foot_rear"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole"/>
+  <joint name="r_sole_fixed_joint" type="fixed">
+    <origin xyz="0.05963000000000001 0 0" rpy="0 0 0"/>
+    <parent link="r_foot_rear"/>
+    <child link="r_sole"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_4"/>
+  <joint name="r_sole_4_fixed_joint" type="fixed">
+    <origin xyz="-0.034999999999999996 -0.03015000000000001 0" rpy="0 0 0"/>
+    <parent link="r_foot_rear"/>
+    <child link="r_sole_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_3"/>
+  <joint name="r_sole_3_fixed_joint" type="fixed">
+    <origin xyz="-0.034999999999999996 0.02484999999999999 0" rpy="0 0 0"/>
+    <parent link="r_foot_rear"/>
+    <child link="r_sole_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="torso_1">
+    <inertial>
+      <origin xyz="-0.008004200000000001 0.000351303 0.051944000000000046" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.8989"/>
+      <inertia ixx="0.0038024477026934725" ixy="1.2239671000204914e-06" ixz="-5.050107277839758e-06" iyy="0.0029226483914300675" iyz="-0.00035973651191912757" izz="0.0023018125890803946"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 5e-05 0.2533580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 5e-05 0.2533580000000001" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_roll" type="revolute">
+    <origin xyz="0 -5e-05 0.0605" rpy="0 0 0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
+    <parent link="root_link"/>
+    <child link="torso_1"/>
+    <limit effort="50000" lower="-0.4014257279586958" upper="0.4014257279586958" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="torso_2">
+    <inertial>
+      <origin xyz="0.00131935 0.00332192 0.026808" rpy="0 0 -1.5707963267948966"/>
+      <mass value="0.77098"/>
+      <inertia ixx="0.0008105413874308448" ixy="-3.5442504712774724e-06" ixz="-7.21480883330135e-05" iyy="0.0014602573028254073" iyz="-1.0808501368993641e-05" izz="0.0012107068713070723"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.18085800000000019" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.18085800000000019" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_pitch" type="revolute">
+    <origin xyz="0 5e-05 0.07250000000000001" rpy="0 0 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="torso_1"/>
+    <child link="torso_2"/>
+    <limit effort="50000" lower="-0.3141592653589793" upper="0.7853981633974483" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="chest">
+    <inertial>
+      <origin xyz="-0.00597433 -7.26041e-05 0.06416630000000001" rpy="0 0 -1.5707963267948966"/>
+      <mass value="8.8237"/>
+      <inertia ixx="0.039708617760736864" ixy="6.204355274120594e-05" ixz="0.00016506620484397756" iyy="0.03867392720151877" iyz="-0.002048920943396954" izz="0.03467001611831408"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.11638800000000014" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_chest_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="chest_color">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.11638800000000014" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_chest_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_yaw" type="revolute">
+    <origin xyz="0 0 0.06447000000000001" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <parent link="torso_2"/>
+    <child link="chest"/>
+    <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="chest_depth_frame"/>
+  <joint name="chest_depth_frame_fixed_joint" type="fixed">
+    <origin xyz="0.0894115 0.0175 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+    <parent link="chest"/>
+    <child link="chest_depth_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_rgb_frame"/>
+  <joint name="chest_rgb_frame_fixed_joint" type="fixed">
+    <origin xyz="0.0894115 -0.0115 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+    <parent link="chest"/>
+    <child link="chest_rgb_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_jetpack">
+    <inertial>
+      <origin xyz="-0.08999715696999999 -0.0664036 -0.04002099999999999" rpy="1.5707963267948966 0 3.141592653589793"/>
+      <mass value="1.80559"/>
+      <inertia ixx="0.0108291" ixy="0.0" ixz="0.0" iyy="0.0139177" iyz="0.000593622" izz="0.0136849"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.09000000000000005 -0.10369599999999986 0.08499999999999977" rpy="1.5707963267948966 0 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_jetpack_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.09000000000000005 -0.10369599999999986 0.08499999999999977" rpy="1.5707963267948966 0 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_jetpack_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jetpack" type="fixed">
+    <origin xyz="-0.085 0.09 0.220084" rpy="1.5707963267948968 0 1.5707963267948968"/>
+    <parent link="chest"/>
+    <child link="chest_jetpack"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="L_BRACKET"/>
+  <joint name="L_BRACKET_fixed_joint" type="fixed">
+    <origin xyz="0.0025000000000000022 -0.108446 -0.045" rpy="1.5707963267948966 0 0"/>
+    <parent link="chest_jetpack"/>
+    <child link="L_BRACKET"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="R_BRACKET"/>
+  <joint name="R_BRACKET_fixed_joint" type="fixed">
+    <origin xyz="-0.1825 -0.108446 -0.045" rpy="-1.570796326794897 0 3.141592653589793"/>
+    <parent link="chest_jetpack"/>
+    <child link="R_BRACKET"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_r_bracket">
+    <inertial>
+      <origin xyz="0.040186 0 -0.013638599999999994" rpy="3.141592653589793 0 3.141592653589793"/>
+      <mass value="0.36394"/>
+      <inertia ixx="0.00010376" ixy="0.0" ixz="3.71713e-05" iyy="0.00074007" iyz="0.0" izz="0.00082949"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="3.141592653589793 0 0"/>
+      <geometry>
+        <mesh filename="C:\Users\pvanteddu\Documents\GitHub\element_co-generative-cad\Mode_frontierAnalayses\jetpack_forearm_simulink_controller\jetpack_forearm_control_simulink_controller_00066\proc\00000-00999\00385\Matlab25_00000\cogen_001_p_001.prt_ascii.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0925 0.12999999999999995 -0.004749999999999998" rpy="3.141592653589793 0 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_r_bracket_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_bracket" type="fixed">
+    <origin xyz="-0.1825 -0.108446 -0.045" rpy="-1.570796326794897 0 3.141592653589793"/>
+    <parent link="chest_jetpack"/>
+    <child link="chest_r_bracket"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_r_turbine_support">
+    <inertial>
+      <origin xyz="0.033974948560747814 1.000000000001e-06 0.025325496432461944" rpy="3.141592653589793 -0.26179931982715643 0"/>
+      <mass value="0.513465"/>
+      <inertia ixx="0.000737005" ixy="-1.84704e-08" ixz="-0.000203475" iyy="0.00132011" iyz="0.0" izz="0.00185737"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.15624417980240066 -0.12999999999999978 -0.033999472494660433" rpy="3.141592653589793 -0.26179931982715643 0"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_r_turbine_support_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.15624417980240066 -0.12999999999999978 -0.033999472494660433" rpy="3.141592653589793 -0.26179931982715643 0"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_r_turbine_support_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_turbine_support" type="fixed">
+    <origin xyz="0.12017           0   -0.013506" rpy="0     0.13963           0"/>
+    <parent link="chest_r_bracket"/>
+    <child link="chest_r_turbine_support"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_r_jet_turbine">
+    <inertial>
+      <origin xyz="5.000000000002197e-05 -6.602469999855698e-05 -0.15870252299023924" rpy="3.141592653589793 -0.26179931982715643 1.5707963267948968"/>
+      <mass value="2.115"/>
+      <inertia ixx="0.00787141" ixy="7.21352e-06" ixz="0.00136635" iyy="0.0082371" iyz="-1.12055e-05" izz="0.0031427"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.12971099999999988 -0.25124341315963833 -0.22335106276867228" rpy="3.141592653589793 -0.26179931982715643 1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_r_jet_turbine_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.12971099999999988 -0.25124341315963833 -0.22335106276867228" rpy="3.141592653589793 -0.26179931982715643 1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_r_jet_turbine_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_jet_turbine" type="fixed">
+    <origin xyz="0.09499923335723759 -0.0002889999999999837 0.1893515902740118" rpy="0 0 -1.5707963267948966"/>
+    <parent link="chest_r_turbine_support"/>
+    <child link="chest_r_jet_turbine"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_l_bracket">
+    <inertial>
+      <origin xyz="0.040185999999999986 0 -0.013638599999999994" rpy="3.141592653589793 0 3.141592653589793"/>
+      <mass value="0.36394"/>
+      <inertia ixx="0.00010376" ixy="0.0" ixz="3.71713e-05" iyy="0.00074007" iyz="0.0" izz="0.00082949"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="3.141592653589793 0 0"/>
+      <geometry>
+        <mesh filename="C:\Users\pvanteddu\Documents\GitHub\element_co-generative-cad\Mode_frontierAnalayses\jetpack_forearm_simulink_controller\jetpack_forearm_control_simulink_controller_00066\proc\00000-00999\00385\Matlab25_00000\cogen_001_p_001.prt_ascii.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dblue">
+        <color rgba="0 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.09250000000000001 0.12999999999999978 -0.00475000000000014" rpy="3.141592653589793 0 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_bracket_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_bracket" type="fixed">
+    <origin xyz="0.0025000000000000022 -0.108446 -0.045" rpy="1.5707963267948966 0 0"/>
+    <parent link="chest_jetpack"/>
+    <child link="chest_l_bracket"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_l_turbine_support">
+    <inertial>
+      <origin xyz="0.03397903484844561 1.000000000001e-06 0.025325701012153992" rpy="3.141592653589793 0.26179931982715643 3.141592653589793"/>
+      <mass value="0.513465"/>
+      <inertia ixx="0.000736992" ixy="-1.84723e-08" ixz="0.000203433" iyy="0.00131997" iyz="0.0" izz="0.00185725"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.15624417980240077 0.12999999999999978 -0.03399947249466047" rpy="3.141592653589793 0.26179931982715643 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_turbine_support_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dgreen">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.15624417980240077 0.12999999999999978 -0.03399947249466047" rpy="3.141592653589793 0.26179931982715643 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_turbine_support_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_turbine_support" type="fixed">
+    <origin xyz="0.12017           0   -0.013506" rpy="0     0.13963           0"/>
+    <parent link="chest_l_bracket"/>
+    <child link="chest_l_turbine_support"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_l_jet_turbine">
+    <inertial>
+      <origin xyz="4.9000000000021445e-05 -5.932499839716998e-05 -0.1587105537506091" rpy="3.141592653589793 0.26179931982715643 1.5707963267948968"/>
+      <mass value="2.11661"/>
+      <inertia ixx="0.00787268" ixy="6.50611e-07" ixz="-0.00136457" iyy="0.00823746" iyz="-1.33065e-05" izz="0.0031418"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.12971099999999977 0.2507434833286949 -0.2233506576354603" rpy="3.141592653589793 0.26179931982715643 1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_jet_turbine_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.12971099999999977 0.2507434833286949 -0.2233506576354603" rpy="3.141592653589793 0.26179931982715643 1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_jet_turbine_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_jet_turbine" type="fixed">
+    <origin xyz="0.09449930352629421 0.0002889999999999837 0.1893511851407998" rpy="0 0 1.5707963267948966"/>
+    <parent link="chest_l_turbine_support"/>
+    <child link="chest_l_jet_turbine"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="neck_1">
+    <inertial>
+      <origin xyz="-0.0021259300000000003 0.00033753499999999997 0.031454700000000016" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <mass value="0.36804"/>
+      <inertia ixx="0.000179701897883096" ixy="-8.833876708276077e-06" ixz="-1.4878426738622656e-05" iyy="0.0002675144279997793" iyz="5.57627455590208e-06" izz="0.00028375118819347193"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.00865 0 0.049000000000000016" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00865 0 0.049000000000000016" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_fixed_joint" type="fixed">
+    <origin xyz="-0.00378849 0 0.1652995" rpy="0 0 0"/>
+    <parent link="chest"/>
+    <child link="neck_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="neck_2">
+    <inertial>
+      <origin xyz="-0.0063756 3.63093e-05 0.006597499999999992" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <mass value="0.1214"/>
+      <inertia ixx="3.922803192379071e-05" ixy="5.7011653935913464e-08" ixz="9.665431536690854e-08" iyy="3.7385115930831784e-05" iyz="-9.08258119140734e-06" izz="4.585137085918645e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_pitch" type="revolute">
+    <origin xyz="0.00865 0 0.049000000000000016" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="neck_1"/>
+    <child link="neck_2"/>
+    <limit effort="50000" lower="-0.5235987755982988" upper="0.3839724354387525" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="neck_3">
+    <inertial>
+      <origin xyz="0.0012653999999999999 -8.218820000000001e-05 0.036108999999999974" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <mass value="0.18386"/>
+      <inertia ixx="0.00011968746119821388" ixy="-5.240077207007726e-07" ixz="-3.6002165484161086e-07" iyy="3.99187384725429e-05" iyz="-9.97584076409671e-06" izz="0.00010705060973108298"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.009500499999999995" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.009500499999999995" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_roll" type="revolute">
+    <origin xyz="0 0 0.009500499999999995" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="neck_2"/>
+    <child link="neck_3"/>
+    <limit effort="50000" lower="-0.3490658503988659" upper="0.3490658503988659" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="head">
+    <inertial>
+      <origin xyz="-0.02065171 0.000526031 0.027896999999999977" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <mass value="1.8728"/>
+      <inertia ixx="0.007642647745719656" ixy="4.8998499721183834e-05" ixz="4.926393457113943e-05" iyy="0.007404636328713935" iyz="-0.00019328685350792046" izz="0.005594148247588756"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.07865050000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_head_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.07865050000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_head_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="neck_yaw" type="revolute">
+    <origin xyz="0 0 0.06915000000000002" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="neck_3"/>
+    <child link="head"/>
+    <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_1">
+    <inertial>
+      <origin xyz="0.00016753510172435454 0.08722598325113093 0.0004507876462612366" rpy="-0.06688748006582523 -0.2444524795872544 -1.3007776603865422"/>
+      <mass value="0.78644"/>
+      <inertia ixx="0.00039843690200765293" ixy="0.00017359471090191915" ixz="0.00016289691907417792" iyy="0.0010102030321362176" iyz="-4.081880122662575e-05" izz="0.000992284738493621"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030411223823216114 -0.029140477503746667 0.01909576653967796" rpy="-0.06688748006582523 -0.2444524795872544 -1.3007776603865422"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030411223823216114 -0.029140477503746667 0.01909576653967796" rpy="-0.06688748006582523 -0.2444524795872544 -1.3007776603865422"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_pitch" type="revolute">
+    <origin xyz="-0.020835100000000002 0.0397423 0.1052029" rpy="0.25326162380993705 -1.1977334179319483e-07 -0.26179930184968747"/>
+    <axis xyz="3.323079797673039e-07 0.9999999783534342 1.4452224303407313e-07"/>
+    <parent link="chest"/>
+    <child link="l_shoulder_1"/>
+    <limit effort="50000" lower="-3.0543261909900767" upper="0.3490658503988659" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_2">
+    <inertial>
+      <origin xyz="0.0076686687055762676 0.00018849980855933923 -0.020403454228093053" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <mass value="0.42492"/>
+      <inertia ixx="0.00038388233784675605" ixy="-4.916851307375464e-05" ixz="-6.324300296292925e-05" iyy="0.00031068388949320714" iyz="-7.587195452290467e-05" izz="0.00026013597951892223"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026393096265395596 -0.14064030580326706 0.017434480978924874" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.026393096265395596 -0.14064030580326706 0.017434480978924874" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_roll" type="revolute">
+    <origin xyz="0.004992849331690821 0.11149983845609901 0.00026865022773668937" rpy="-0.17453296140985003 -0.05374759931933849 0"/>
+    <axis xyz="0.9999998262417685 2.034825262722459e-07 -4.0230228454118944e-08"/>
+    <parent link="l_shoulder_1"/>
+    <child link="l_shoulder_2"/>
+    <limit effort="50000" lower="0.20943951023931956" upper="2.8448866807507573" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_3">
+    <inertial>
+      <origin xyz="-9.561931744894031e-05 3.089115052354319e-05 -0.007966608685190314" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <mass value="0.2625"/>
+      <inertia ixx="7.626797646850803e-05" ixy="-1.6986505676585652e-06" ixz="1.0777869051741286e-05" iyy="7.457103744115285e-05" iyz="-5.511652932595611e-06" izz="0.00012000121562184585"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743229422373917 -0.14064066906059042 0.0717345197029866" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743229422373917 -0.14064066906059042 0.0717345197029866" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_arm_ft_sensor" type="fixed">
+    <origin xyz="-0.004350133156978318 3.632573233602887e-07 -0.05430003872406172" rpy="0 0 0"/>
+    <parent link="l_shoulder_2"/>
+    <child link="l_shoulder_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_upper_arm">
+    <inertial>
+      <origin xyz="0.0010476375729993916 0.002559622582259863 -0.05065314985074498" rpy="-0.06212860830092193 0.0714268908124578 0.27099931149673545"/>
+      <mass value="1.67729"/>
+      <inertia ixx="0.002960829234557446" ixy="-1.0441222117313817e-05" ixz="0.00022298859388284023" iyy="0.0030756376591531418" iyz="0.00020156448677983343" izz="0.001327263106289413"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743147864881363 -0.14064024560810592 0.09423446107611103" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743147864881363 -0.14064024560810592 0.09423446107611103" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_yaw" type="revolute">
+    <origin xyz="0 -4.2345248449371375e-07 -0.02249994137312443" rpy="0 0 0"/>
+    <axis xyz="2.2276474047344674e-08 -4.39378624733644e-08 -1.0000002566182309"/>
+    <parent link="l_shoulder_3"/>
+    <child link="l_upper_arm"/>
+    <limit effort="50000" lower="-0.8726646259971648" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_elbow_1">
+    <inertial>
+      <origin xyz="-0.00423027106126244 0.0004313452938078943 -0.0009432406828351891" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <mass value="0.107667"/>
+      <inertia ixx="1.39504e-05" ixy="1.76574e-06" ixz="3.57718e-06" iyy="2.16784e-05" iyz="-8.71415e-07" izz="2.71069e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02074321762996196 -0.13914059818467703 0.21793479861369477" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_elbow_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.02074321762996196 -0.13914059818467703 0.21793479861369477" rpy="-0.12008543635729367 -0.2297887323171894 -1.2882780461440753"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_elbow_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_elbow" type="revolute">
+    <origin xyz="0.0099999302349194 -0.001499647423428896 -0.12370033753758373" rpy="0 0 0"/>
+    <axis xyz="-8.81182417675902e-08 -1.0000002733514628 4.404736120289243e-08"/>
+    <parent link="l_upper_arm"/>
+    <child link="l_elbow_1"/>
+    <limit effort="50000" lower="-0.05235987755982989" upper="1.3089969389957472" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="L_FOREARM"/>
+  <joint name="L_FOREARM_fixed_joint" type="fixed">
+    <origin xyz="-0.014999997481142335 0.001999966984672058 0.006000190633300373" rpy="1.5707963634150914 -1.5707959411047887 0"/>
+    <parent link="l_elbow_1"/>
+    <child link="L_FOREARM"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_forearm">
+    <inertial>
+      <origin xyz="-0.13144957359056722 6.579725385970348e-05 -0.023664172318918125" rpy="-2.3561949108383837 -1.2085781829840494 -0.872663970096126"/>
+      <mass value="0.84566"/>
+      <inertia ixx="0.0020607" ixy="0.000250775" ixz="-0.000415171" iyy="0.0036462" iyz="0.000153302" izz="0.0046905"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-0.1745 0 0 "/>
+      <geometry>
+        <mesh filename="C:\Users\pvanteddu\Documents\GitHub\element_co-generative-cad\Mode_frontierAnalayses\jetpack_forearm_simulink_controller\jetpack_forearm_control_simulink_controller_00066\proc\00000-00999\00385\Matlab26_00000\cogen_001_p_002.prt_ascii.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dblue">
+        <color rgba="0 0 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.21193456418652468 -0.0357431759934032 0.14114064083593308" rpy="-2.3561949108383837 -1.2085781829840494 -0.872663970096126"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_elbow_prosup_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_prosup_joint" type="fixed">
+    <origin xyz="-0.014999997481142335 0.001999966984672058 0.006000190633300373" rpy="1.5707963634150914 -1.5707959411047887 0"/>
+    <parent link="l_elbow_1"/>
+    <child link="l_forearm"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_arm_jet_turbine">
+    <inertial>
+      <origin xyz="2.4681861376940617e-07 0 -0.15814158399339034" rpy="3.0215072327565813 0.22978870437666338 -0.2825182075180713"/>
+      <mass value="2.155"/>
+      <inertia ixx="-0.00934762" ixy="-0.000261966" ixz="0.00217093" iyy="-0.00972494" iyz="-0.00111183" izz="-0.000645087"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.23085097168388896 -0.03574304568941889 -0.5299356907276523" rpy="3.0215072327565813 0.22978870437666338 -0.2825182075180713"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_l_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dgreen">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.23085097168388896 -0.03574304568941889 -0.5299356907276523" rpy="3.0215072327565813 0.22978870437666338 -0.2825182075180713"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_l_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_elbow_turbine" type="fixed">
+    <origin xyz="-0.356           0        -0.1" rpy="1.5346e-07     -1.5708           0"/>
+    <parent link="l_forearm"/>
+    <child link="l_arm_jet_turbine"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_shoulder_1">
+    <inertial>
+      <origin xyz="0.00016744811157206468 -0.08721740246539643 0.0004507343002208668" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <mass value="0.78697"/>
+      <inertia ixx="0.0003985239519684459" ixy="-0.0001736132173031554" ixz="-0.0001629290145974639" iyy="0.0010103722401209082" iyz="-4.081377037378354e-05" izz="0.0009923960134670207"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030411233356184383 0.029140462447480246 0.01909577433393813" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030411233356184383 0.029140462447480246 0.01909577433393813" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_pitch" type="revolute">
+    <origin xyz="-0.020835100000000002 -0.0397423 0.1052029" rpy="-0.25326164431680925 2.3014774394592079e-07 0.26179970938509745"/>
+    <axis xyz="1.499044390054707e-07 0.9999999783534812 -1.2401537036188515e-07"/>
+    <parent link="chest"/>
+    <child link="r_shoulder_1"/>
+    <limit effort="50000" lower="-3.0543261909900767" upper="0.3490658503988659" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_shoulder_2">
+    <inertial>
+      <origin xyz="0.005108924921141532 -0.00021262473188488062 -0.020403359362654718" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <mass value="0.42492"/>
+      <inertia ixx="0.0003829366314543841" ixy="4.8603409990214605e-05" ixz="6.290223922809094e-05" iyy="0.00031037929080854744" iyz="-7.540635367635347e-05" izz="0.0002587851085269554"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.023893259221697872 0.14064089823597106 0.01743452847998419" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.023893259221697872 0.14064089823597106 0.01743452847998419" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_roll" type="revolute">
+    <origin xyz="0.007489008185044645 -0.11150041046657977 0.00040278589669752105" rpy="0.17453306234069352 -0.05374779257913059 -6.132332688882274e-07"/>
+    <axis xyz="-0.9999998262417886 4.2105014356162707e-08 2.4630481189336084e-08"/>
+    <parent link="r_shoulder_1"/>
+    <child link="r_shoulder_2"/>
+    <limit effort="50000" lower="0.20943951023931956" upper="2.8448866807507573" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_shoulder_3">
+    <inertial>
+      <origin xyz="-8.296442829115735e-05 -3.0309267538636275e-05 -0.007966520489017755" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <mass value="0.2625"/>
+      <inertia ixx="7.628615554065704e-05" ixy="1.6702215931276847e-06" ixz="-1.0784251066431893e-05" iyy="7.45516013055042e-05" iyz="-5.495630207834499e-06" izz="0.00012000314956569149"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.03074320560708775 0.1406406791860105 0.07173451005787518" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.03074320560708775 0.1406406791860105 0.07173451005787518" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_arm_ft_sensor" type="fixed">
+    <origin xyz="-0.006849946385389875 2.1904996055921444e-07 -0.054299981577890996" rpy="0 0 0"/>
+    <parent link="r_shoulder_2"/>
+    <child link="r_shoulder_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_upper_arm">
+    <inertial>
+      <origin xyz="0.00104763877624129 -0.002559626059706027 -0.05065314965013519" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <mass value="1.8703"/>
+      <inertia ixx="0.0033005254762146084" ixy="-7.856912537486065e-05" ixz="0.0005314736736640653" iyy="0.003275179877659797" iyz="0.00032042055112711576" izz="0.0016353876705876744"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743123698670136 0.14064025735327973 0.09423445143102875" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743123698670136 0.14064025735327973 0.09423445143102875" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_yaw" type="revolute">
+    <origin xyz="0 4.2183273077367467e-07 -0.02249994137315358" rpy="0 0 0"/>
+    <axis xyz="-3.787621790513063e-08 2.805197706068352e-08 1.0000002566182309"/>
+    <parent link="r_shoulder_3"/>
+    <child link="r_upper_arm"/>
+    <limit effort="50000" lower="-0.8726646259971648" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_elbow_1">
+    <inertial>
+      <origin xyz="-0.0042210586272278874 -0.00045736337500790203 -0.0010160983262984813" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <mass value="0.107261"/>
+      <inertia ixx="1.40525e-05" ixy="-1.76005e-06" ixz="-3.59476e-06" iyy="2.17508e-05" iyz="-8.29645e-07" izz="2.70785e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02074319177606632 0.13914061722125232 0.21793478892057525" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_elbow_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.02074319177606632 0.13914061722125232 0.21793478892057525" rpy="-0.12008540036084188 0.2297886675301102 -1.8533144378692001"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_elbow_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_elbow" type="revolute">
+    <origin xyz="0.009999931922603816 0.0014996401320274133 -0.1237003374895465" rpy="0 0 0"/>
+    <axis xyz="2.4949582809984105e-07 -1.0000002733514362 2.7942487004772865e-08"/>
+    <parent link="r_upper_arm"/>
+    <child link="r_elbow_1"/>
+    <limit effort="50000" lower="-0.05235987755982989" upper="1.3089969389957472" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="R_FOREARM"/>
+  <joint name="R_FOREARM_fixed_joint" type="fixed">
+    <origin xyz="-0.01499999725199383 -0.0019999689733820603 0.0060001905432816305" rpy="1.570796451552234 -1.5707960126779352 0"/>
+    <parent link="r_elbow_1"/>
+    <child link="R_FOREARM"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_forearm">
+    <inertial>
+      <origin xyz="-0.13145056911634542 6.584926183615669e-05 0.023664093429151656" rpy="0.7853977427514093 -1.2085781829840494 2.2689286834936673"/>
+      <mass value="0.84566"/>
+      <inertia ixx="0.0020607" ixy="-0.000250774" ixz="0.000415154" iyy="0.0036462" iyz="0.000153298" izz="0.0046905"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="2.9671 0 0"/>
+      <geometry>
+        <mesh filename="C:\Users\pvanteddu\Documents\GitHub\element_co-generative-cad\Mode_frontierAnalayses\jetpack_forearm_simulink_controller\jetpack_forearm_control_simulink_controller_00066\proc\00000-00999\00385\Matlab26_00000\cogen_001_p_002.prt_ascii.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="0 0 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.21193456418652473 -0.0357431759934032 -0.14114064083593317" rpy="0.7853977427514093 -1.2085781829840494 2.2689286834936673"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_elbow_prosup_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_prosup_joint" type="fixed">
+    <origin xyz="-0.01499999725199383 -0.0019999689733820603 0.0060001905432816305" rpy="1.570796451552234 -1.5707960126779352 0"/>
+    <parent link="r_elbow_1"/>
+    <child link="r_forearm"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_arm_jet_turbine">
+    <inertial>
+      <origin xyz="7.185032821210857e-07 3.9258985742862684e-07 -0.15814251758881814" rpy="3.0215072134275287 -0.22978871932764794 0.5443178016082791"/>
+      <mass value="2.155"/>
+      <inertia ixx="-0.00934757" ixy="0.000261972" ixz="-0.00217099" iyy="-0.00972494" iyz="-0.00111186" izz="-0.000645129"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.21430267906834452 -0.09434867402057348 -0.5299364637555667" rpy="3.0215072134275287 -0.22978871932764794 0.5443178016082791"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_r_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.21430267906834452 -0.09434867402057348 -0.5299364637555667" rpy="3.0215072134275287 -0.22978871932764794 0.5443178016082791"/>
+      <geometry>
+        <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_r_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_elbow_turbine" type="fixed">
+    <origin xyz="-0.356           0         0.1" rpy="1.5708      -1.309     -1.5708"/>
+    <parent link="r_forearm"/>
+    <child link="r_arm_jet_turbine"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="base_link"/>
+  <joint name="base_link_fixed_joint" type="fixed">
+<origin xyz="0 0 0" rpy="0 -0 0"/>
+<axis xyz="0 0 0"/>
+<parent link="root_link"/>
+<child link="base_link"/>
+</joint>
+  <gazebo reference="r_arm_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_jet_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_jet_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_arm_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_foot_front_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_foot_rear_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_foot_front">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo reference="l_foot_rear">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo>
+  <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
+  </plugin>
+</gazebo>
+  <gazebo reference="l_leg_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_leg_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_foot_front_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_foot_rear_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_foot_front">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo reference="r_foot_rear">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo reference="r_hip_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_hip_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_hip_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_knee">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_ankle_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_ankle_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_knee">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_ankle_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_ankle_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_elbow_turbine">
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="jetpack">
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_elbow_turbine">
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="neck_pitch">
+<implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="neck_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="neck_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_pitch">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_roll">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_yaw">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_elbow">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_pitch">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_roll">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_yaw">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_elbow">
+  <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo>
+<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+</plugin>
+<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+</plugin>
+<plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_head_without_eyes_V2_7.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="jets-plugin" filename="libjets-plugin.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/jets.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="basestate" filename="libgazebo_yarp_basestate.so">
+    <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/base.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+  <yarpRobotInterfaceConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/iRonCub.xml</yarpRobotInterfaceConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo reference="l_foot_rear">
+    <visual>
+      <material>
+        <ambient>0.55 0.55 0.55 1.0</ambient>
+        <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        <specular>0.6 0.6 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="l_foot_front">
+    <visual>
+      <material>
+        <ambient>0.55 0.55 0.55 1.0</ambient>
+        <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        <specular>0.6 0.6 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="r_foot_front">
+    <visual>
+      <material>
+        <ambient>0.55 0.55 0.55 1.0</ambient>
+        <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        <specular>0.6 0.6 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="r_foot_rear">
+    <visual>
+      <material>
+        <ambient>0.55 0.55 0.55 1.0</ambient>
+        <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        <specular>0.6 0.6 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="chest">
+    <visual>
+      <material>
+        <ambient>0.18823499999999999 0.18823499999999999 0.18823499999999999 1.0</ambient>
+        <diffuse>0.2823525 0.2823525 0.2823525 1.0</diffuse>
+        <specular>0.18823499999999999 0.18823499999999999 0.18823499999999999 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="l_arm_ft_sensor">
+    <sensor name="l_arm_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="l_arm_ft" type="force_torque">
+    <parent joint="l_arm_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="r_arm_ft_sensor">
+    <sensor name="r_arm_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="r_arm_ft" type="force_torque">
+    <parent joint="r_arm_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="l_foot_front_ft_sensor">
+    <sensor name="l_foot_front_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="left_foot_front_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_left_foot_front_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="l_foot_front_ft" type="force_torque">
+    <parent joint="l_foot_front_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="l_foot_rear_ft_sensor">
+    <sensor name="l_foot_rear_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="left_foot_rear_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_left_foot_rear_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="l_foot_rear_ft" type="force_torque">
+    <parent joint="l_foot_rear_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="r_foot_front_ft_sensor">
+    <sensor name="r_foot_front_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="right_foot_front_ft_sensor_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_right_foot_front_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="r_foot_front_ft" type="force_torque">
+    <parent joint="r_foot_front_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="r_foot_rear_ft_sensor">
+    <sensor name="r_foot_rear_ft" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="right_foot_rear_ft_sensor_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/FT/gazebo_icub_right_foot_rear_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="r_foot_rear_ft" type="force_torque">
+    <parent joint="r_foot_rear_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="head">
+    <sensor name="head_imu" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <pose>0.0035000000000000005 0.0055 0.10133400000000001 3.141592653589793 -0.0 -1.5707963267948966</pose>
+      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="head_imu" type="accelerometer">
+    <parent link="head"/>
+    <origin rpy="3.141592653589793 -0.0 -1.5707963267948966" xyz="0.0035000000000000005 0.0055 0.10133400000000001"/>
+  </sensor>
+  <gazebo reference="chest">
+    <sensor name="chest_imu" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <pose>0.100121 0.0076 0.0816279 -3.141592653589793 -1.5707963267948966 0.0</pose>
+      <plugin name="chest_plugin_IMU" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iRonCub-Mk3/iRonCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="chest_imu" type="accelerometer">
+    <parent link="chest"/>
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0.0" xyz="0.100121 0.0076 0.0816279"/>
+  </sensor>
+  <gazebo>
+    <pose>0.0 0.0 0.64 0.0 0.0 0.0</pose>
+  </gazebo>
+</robot>
