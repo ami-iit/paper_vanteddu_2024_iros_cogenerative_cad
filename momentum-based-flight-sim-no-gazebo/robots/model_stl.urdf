@@ -11,7 +11,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_root_link_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -33,7 +33,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
-        <color rgba="0 0 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -63,7 +63,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
-        <color rgba="1 0 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -93,7 +93,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
-        <color rgba="0 0 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -121,7 +121,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
-        <color rgba="1 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -151,7 +151,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
-        <color rgba="1 0 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -181,7 +181,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="cyan">
-        <color rgba="0 1 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -211,7 +211,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -362,7 +362,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dblue">
-        <color rgba="0 0 0.8 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -392,7 +392,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_hip_3_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -420,7 +420,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upper_leg_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -450,7 +450,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_lower_leg_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -510,7 +510,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_ankle_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
-        <color rgba="1 0 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -631,7 +631,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
-        <color rgba="0 0 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -661,7 +661,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_torso_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
-        <color rgba="1 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -691,7 +691,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_chest_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="chest_color">
-        <color rgba="0.313725 0.313725 0.313725 1.0"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -735,7 +735,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_jetpack_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
-        <color rgba="1 0 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -861,7 +861,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_bracket_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dblue">
-        <color rgba="0 0 0.8 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -889,7 +889,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_turbine_support_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+        <color rgba="0 1 0 1"/>
       </material>
     </visual>
     <collision>
@@ -917,7 +917,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_3_l_jet_turbine_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -945,7 +945,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -973,7 +973,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
-        <color rgba="0 0 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1003,7 +1003,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_neck_3_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
-        <color rgba="1 0 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1033,7 +1033,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_head_head_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
-        <color rgba="0 0 1 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1063,7 +1063,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
-        <color rgba="1 1 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1093,7 +1093,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
-        <color rgba="1 0 1 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1123,7 +1123,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="cyan">
-        <color rgba="0 1 1 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -1151,7 +1151,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_l_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -1246,7 +1246,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_l_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1274,7 +1274,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1304,7 +1304,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
-        <color rgba="0 1 0 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1362,7 +1362,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
-        <color rgba="1 0 0 1"/>
+        <color rgba="0 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -1392,7 +1392,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_elbow_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
-        <color rgba="0 0 1 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -1429,7 +1429,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_icub3_r_elbow_prosup_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
-        <color rgba="1 1 0 1"/>
+        <color rgba="0 0 0.8 1"/>
       </material>
     </visual>
     <collision>
@@ -1457,7 +1457,7 @@
         <mesh filename="package://iRonCub-Mk3/iRonCub/meshes/stl/sim_sea_r_arm_p250_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
-        <color rgba="1 0 1 1"/>
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
