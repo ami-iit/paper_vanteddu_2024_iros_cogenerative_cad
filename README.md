@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/744b3896-48fa-4a81-b9fb-ecb3180dbe6f
 <div align="center">
   <a href="#Installation"><b>Installation</b></a> |
   <a href="https://arxiv.org/abs/2410.07963"><b>arXiv</b></a> |
-  <a href="https://www.youtube.com/watch?v=k_rbv8lNKjA&ab_channel=ArtificialandMechanicalIntelligence"><b>Video</b></a>
+  <a href="https://youtu.be/k_rbv8lNKjA"><b>Video</b></a>
 </div>
 
 ## Abstract
@@ -31,8 +31,6 @@ The geometric characteristics of these links are parameterized and optimized usi
 
 2. Follow the instructions to install https://github.com/ami-iit/ironcub-mk1-software using `conda` environments.
 
-
-
 ### Maintainer
 
 This repository is maintained by:
@@ -44,3 +42,4 @@ This repository is maintained by:
 <p align="left">
    <a href="https://github.com/ami-iit/paper_vanteddu_2024_iros_cogenerative_cad/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ami-iit/paper_vanteddu_2024_iros_cogenerative_cad" alt="Size" class="center"/></a>
 </p>
+
