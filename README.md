@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/744b3896-48fa-4a81-b9fb-ecb3180dbe6f
 </p>
 <div align="center">
   <a href="#Installation"><b>Installation</b></a> |
-  <a href="[https://arxiv.org/abs/2410.07963](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10802023)"><b>Paper</b></a> |
+  <a href="[https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10802023]"><b>Paper</b></a> |
   <a href="https://youtu.be/k_rbv8lNKjA"><b>Video</b></a>
 </div>
 
